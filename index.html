@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Charts.js</title>
+    </head>
+    <body>
+        <header>
+            <h1>Charts.js</h1>
+            <h2>Primera prueba</h2>
+        </header>
+        <main>
+            <article>
+                <p>Usemos datos de <a href="https://raw.githubusercontent.com/profesorfaco/dno037-2023/main/clase-06/datos.json">un JSON</a>. Tales datos fueron extraídos de una tabla sobre Inmigrantes internacionales según región de residencia habitual y sexo. La tabla está incluida en el informe sobre <a href="http://www.censo2017.cl/descargas/inmigracion/181123-documento-migracion.pdf" target="_blank">Características de la inmigración internacional en Chile</a> (INE, 2017).</p>
+                <canvas id="regiones" width="400" height="300"></canvas>
+                <p>Ahora estamos probando <a href="https://www.chartjs.org/">Chart.js</a>, una biblioteca de JavaScript distinta de p5.js. Ya NO podemos cargar datos con un <a href="https://p5js.org/es/reference/#/p5/loadJSON">loadJSON()</a>. Desde hoy usaremos la <a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch">API Fetch</a> de JavaScript.</p>
+            </article>
+        </main>
+        <footer>
+            <p><a href="#">Nombre Apellido</a> <a href="#">DNO037</a></p>
+        </footer>
+        <script>
+
+    //Ahora puedo armar el gráfico
+    new Chart(document.getElementById("regiones"), {
+        type: "bubble",
+        data: {
+            datasets: [
+                {
+    label: 'First Dataset',
+    data: [{
+      x: 20,
+      y: 30,
+      r: 15
+    }, {
+      x: 40,
+      y: 10,
+      r: 10
+    }],
+    backgroundColor: 'rgb(255, 99, 132)'
+                    
+  }, {
+    label: 'Second Dataset',
+    data: [{
+      x: 30,
+      y: 40,
+      r: 35
+    }, {
+      x: 70,
+      y: 60,
+      r: 20
+    },
+          ],
+    backgroundColor: 'rgb(55, 219, 32)'
+  },           
+                
+            ],
+        },
+        
+    });
+
+
+        </script>
+    </body>
+</html>
