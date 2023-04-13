@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+html, body{
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: linear-gradient(#eceff1,#c1cde5);
+    color: #263238;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+a{
+    color:#000a12;
+}
+
+header, main {
+    width: 60vw;
+    margin:5vh auto;
+}
+
+header{
+    text-align: center;
+}
+
+header h1{
+    padding:0 3rem;
+    font-size:calc(2rem + 2vw);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color:#4f5b62;
+    text-shadow: 0 0 3px #c1cde5;
+}
+
+header h2{
+    padding:0 3rem;
+    font-size:calc(1rem + 1vw);
+    color:#4f5b62;
+}
+
+article p{
+    padding:0 3rem;
+    font-size:calc(1rem + 0.25vw);
+    margin:5% auto;
+}
+
+article div{
+    width:60%;
+    margin:0 auto;
+}
+
+article hr{
+    width:10%;
+    margin:4rem auto;
+}
+
+@media (orientation:portrait){
+
+    header, main {
+        width: 90vw;
+    }
+
+}
+
+footer{
+    width: 60vw;
+    margin:5vh auto;    
+}
+
+footer p {
+    font-size:90%;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+}
